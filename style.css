@@ -24,12 +24,11 @@ h1{
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    
 }
 img{
-    width: 70%;
-    height: 50%;
+    width: 50%;
+    height: 90%;
 }
 
 .users,.credit{
@@ -41,7 +40,6 @@ border-radius: 5px;
 }
 .h1Footer {
     color: white;
-    font-size: 2rem;
     margin-bottom: 8%;
 }
 
