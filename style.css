@@ -50,7 +50,6 @@ img{
 .users,.credit{
 width: 50%;
 height: 70%;
-border: 2px solid white;
 border-radius: 5px;
 
 }
@@ -70,6 +69,8 @@ border-radius: 5px;
     font-size: 1.2rem;
     transition: 0.5s;
     font-weight: bold;
+    border: 2px solid white;
+   
 }
 
 .usersMeinBtn:hover, .creditMeinBtn:hover {
@@ -84,5 +85,34 @@ border-radius: 5px;
     padding-top: 150px;
     height: 100%;
     width: 100%;
+    padding-top: 150px;
 }
+.contentByJs{
+    padding: 3%;
+    /* background-color: rgba(14, 220, 7, 0.481); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: none;
+    
+}
+button{
+    width: 30%;
+    height: 40%;
+    border-radius: 5px;
+    border: solid 2px black;
+    border-radius: 12px;
+    margin: 1.2%;
+    padding: 0.4%;
+    font-size: larger;
+}
+
+button:hover{
+    background-color: rgb(12, 241, 54);
+}
+
 
