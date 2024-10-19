@@ -17,7 +17,20 @@ footer {
     padding: 2% 5%;
     background-color: black;
 }
-
+h1{
+    text-align: center;
+}
+.logoContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+img{
+    width: 70%;
+    height: 50%;
+}
 
 .users,.credit{
 width: 20%;
