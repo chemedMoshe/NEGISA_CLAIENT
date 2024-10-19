@@ -10,8 +10,8 @@ const createElements = (element,content = "") => {
     return newElement;
 }
 
-creditBtn.addEventListener("click", creditsBtnFunc)
-usersBtn.addEventListener("click", usersBtnFunc)
+creditBtn.addEventListener("pointerdown", creditsBtnFunc)
+usersBtn.addEventListener("pointerdown", usersBtnFunc)
 
 function creditsBtnFunc() {
    const h1 = createElements("h1","זיכויים");
