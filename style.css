@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background-color: aquamarine;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 2% 5%;
+    background-color: black;
+}
+
+
+.users,.credit{
+width: 20%;
+height: 100%;
+border: 2px solid white;
+border-radius: 5px;
+
+}
+.h1Footer {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 8%;
+}
+
+.usersMeinBtn, .creditMeinBtn {
+    background-color: rgb(69, 179, 89);
+    color: black;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.usersMeinBtn:hover, .creditMeinBtn:hover {
+    background-color: rgb(12, 241, 54);
+    transition: 0.5s;
+}
+.baceContainer{
+    height: 100%;
+    width: 100%;
+}
