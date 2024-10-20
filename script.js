@@ -1,8 +1,11 @@
-const creditBtn = document.querySelector(".creditMeinBtn");
-const usersBtn = document.querySelector(".usersMeinBtn");
-const contentByJs = document.querySelector(".contentByJs");
+import { usersBtnFunc } from "./users/users.js";
+import { creditsBtnFunc } from "./credit/credit.js";
 
-const createElements = (element, content = "") => {
+export const creditBtn = document.querySelector(".creditMeinBtn");
+export const usersBtn = document.querySelector(".usersMeinBtn");
+export const contentByJs = document.querySelector(".contentByJs");
+
+export const createElements = (element, content = "") => {
     const newElement = document.createElement(element);
     if (content) {
         newElement.textContent = content;
@@ -13,37 +16,9 @@ const createElements = (element, content = "") => {
 creditBtn.addEventListener("pointerdown", creditsBtnFunc)
 usersBtn.addEventListener("pointerdown", usersBtnFunc)
 
-function creditsBtnFunc() {
-    contentByJs.innerHTML = "";
-    const h1 = createElements("h1", "זיכויים");
-    const addCreditBtn = createElements("button", "הוספת זיכוי");
-    const creditPerUserBtn = createElements("button", "זיכויים לפי סועד");
-    const allCreditBtn = createElements("button", "כל הזיכויים");
-    const deleteCreditBtn = createElements("button", "מחיקת זיכוי");
-   
-    contentByJs.appendChild(h1);
-    contentByJs.appendChild(addCreditBtn);
-    contentByJs.appendChild(creditPerUserBtn);
-    contentByJs.appendChild(allCreditBtn);
-    contentByJs.appendChild(deleteCreditBtn);
-    contentByJs.style.display = "flex";
-}
 
 
-function usersBtnFunc() {
-    contentByJs.innerHTML = "";
-    const h1 = createElements("h1", "סועדים");
-    const addCreditBtn = createElements("button", "הוספת סועד");
-    const creditPerUserBtn = createElements("button", "בדיקת יתרת סועד");
-    const allCreditBtn = createElements("button", "כל הסועדים");
-    const deleteCreditBtn = createElements("button", "מחיקת סועד");
-    contentByJs.appendChild(h1);
-    contentByJs.appendChild(addCreditBtn);
-    contentByJs.appendChild(creditPerUserBtn);
-    contentByJs.appendChild(allCreditBtn);
-    contentByJs.appendChild(deleteCreditBtn);
-    contentByJs.style.display = "flex";
-    contentByJs.style.position = "relative";
-}
+
+
 
 
