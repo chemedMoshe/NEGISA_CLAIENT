@@ -2,10 +2,10 @@ const creditBtn = document.querySelector(".creditMeinBtn");
 const usersBtn = document.querySelector(".usersMeinBtn");
 const contentByJs = document.querySelector(".contentByJs");
 
-const createElements = (element,content = "") => {
+const createElements = (element, content = "") => {
     const newElement = document.createElement(element);
-    if (content){
-    newElement.textContent = content;
+    if (content) {
+        newElement.textContent = content;
     }
     return newElement;
 }
@@ -14,10 +14,11 @@ creditBtn.addEventListener("pointerdown", creditsBtnFunc)
 usersBtn.addEventListener("pointerdown", usersBtnFunc)
 
 function creditsBtnFunc() {
-   const h1 = createElements("h1","זיכויים");
-    const addCreditBtn = createElements("button","הוספת זיכוי");
-    const creditPerUserBtn = createElements("button","זיכויים לפי משתמש"); 
-    const allCreditBtn = createElements("button","כל הזיכויים");
+    contentByJs.innerHTML = "";
+    const h1 = createElements("h1", "זיכויים");
+    const addCreditBtn = createElements("button", "הוספת זיכוי");
+    const creditPerUserBtn = createElements("button", "זיכויים לפי סועד");
+    const allCreditBtn = createElements("button", "כל הזיכויים");
     contentByJs.appendChild(h1);
     contentByJs.appendChild(addCreditBtn);
     contentByJs.appendChild(creditPerUserBtn);
@@ -27,15 +28,16 @@ function creditsBtnFunc() {
 
 
 function usersBtnFunc() {
-    const h1 = createElements("h1","משתמשים");
-     const addCreditBtn = createElements("button","הוספת משתמש");
-     const creditPerUserBtn = createElements("button","בדיקת יתרת משתמש"); 
-     const allCreditBtn = createElements("button","כל המשתמשים");
-     contentByJs.appendChild(h1);
-     contentByJs.appendChild(addCreditBtn);
-     contentByJs.appendChild(creditPerUserBtn);
-     contentByJs.appendChild(allCreditBtn);
-     contentByJs.style.display = "flex";
- }
+    contentByJs.innerHTML = "";
+    const h1 = createElements("h1", "סועדים");
+    const addCreditBtn = createElements("button", "הוספת סועד");
+    const creditPerUserBtn = createElements("button", "בדיקת יתרת סועד");
+    const allCreditBtn = createElements("button", "כל הסועדים");
+    contentByJs.appendChild(h1);
+    contentByJs.appendChild(addCreditBtn);
+    contentByJs.appendChild(creditPerUserBtn);
+    contentByJs.appendChild(allCreditBtn);
+    contentByJs.style.display = "absolute";
+}
 
 
