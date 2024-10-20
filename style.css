@@ -86,7 +86,8 @@ border-radius: 5px;
     justify-content: center;
     height: 100%;
     width: 100%;
-    min-height: 440px;
+    flex-grow: 1;
+    /* min-height: 440px; */
 }
 .contentByJs{
     padding: 3%;
