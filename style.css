@@ -111,10 +111,12 @@ button{
     margin: 1.2%;
     padding: 0.4%;
     font-size: larger;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
+}
+button:hover{
+    transform: scale(1.1);
 }
 
-button:hover{
-    background-color: rgb(12, 241, 54);
-}
+
 
 
