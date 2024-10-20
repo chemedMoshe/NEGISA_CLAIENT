@@ -87,7 +87,6 @@ border-radius: 5px;
     height: 100%;
     width: 100%;
     flex-grow: 1;
-    /* min-height: 440px; */
 }
 .contentByJs{
     padding: 3%;
