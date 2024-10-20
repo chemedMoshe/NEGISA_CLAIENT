@@ -2,16 +2,12 @@ import { createElements } from "../script.js";
 import { contentByJs } from "../script.js";
 export function creditsBtnFunc() {
     contentByJs.innerHTML = "";
-    const h1 = createElements("h1", "זיכויים");
-    const addCreditBtn = createElements("button", "הוספת זיכוי");
-    const creditPerUserBtn = createElements("button", "זיכויים לפי סועד");
-    const allCreditBtn = createElements("button", "כל הזיכויים");
-    const deleteCreditBtn = createElements("button", "מחיקת זיכוי");
-   
-    contentByJs.appendChild(h1);
-    contentByJs.appendChild(addCreditBtn);
-    contentByJs.appendChild(creditPerUserBtn);
-    contentByJs.appendChild(allCreditBtn);
-    contentByJs.appendChild(deleteCreditBtn);
+    contentByJs.appendChild(createElements("h1", "זיכויים"));
+    contentByJs.appendChild(createElements("button", "הוספת זיכוי"));
+    contentByJs.appendChild(createElements("button", "עריכת זיכוי"));
+    contentByJs.appendChild(createElements("button", "מחיקת זיכוי"));
+    contentByJs.appendChild(createElements("button", "זיכויים לפי סועד"));
+    contentByJs.appendChild(createElements("button", "כל הזיכויים"));
     contentByJs.style.display = "flex";
+    contentByJs.style.position = "absolute";
 }
