@@ -37,7 +37,8 @@ function usersBtnFunc() {
     contentByJs.appendChild(addCreditBtn);
     contentByJs.appendChild(creditPerUserBtn);
     contentByJs.appendChild(allCreditBtn);
-    contentByJs.style.display = "absolute";
+    contentByJs.style.display = "flex";
+    contentByJs.style.position = "relative";
 }
 
 
