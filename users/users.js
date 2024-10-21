@@ -30,10 +30,12 @@ function createUsers(){
     inputUserName.setAttribute("placeholder", "שם הסועד")
     
     const inputUserPhone = createElements("input")
+    inputUserPhone.type = "tel"
     inputUserPhone.className = "createUserInput"
     inputUserPhone.setAttribute("placeholder", "טלפון הסועד")
     
     const sumcredit = createElements("input")
+    sumcredit.type = "number"
     sumcredit.className = "createUserInput"
     sumcredit.setAttribute("placeholder", "יתרת זכות")
     
