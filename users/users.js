@@ -9,7 +9,7 @@ export function usersBtnFunc() {
     const editCreditBtn = createElements("button", "עריכת סועד");
     const allCreditBtn = createElements("button", "כל הסועדים");
     addUseritBtn.addEventListener("pointerdown", createUsers);
-    
+
     contentByJs.appendChild(createElements("h1", "סועדים"));
     contentByJs.appendChild(addUseritBtn);
     contentByJs.appendChild(editCreditBtn);
@@ -19,37 +19,49 @@ export function usersBtnFunc() {
     contentByJs.style.display = "flex";
     contentByJs.style.position = "absolute";
 }
-const a = fetch
+const newUser = () => {
+    const userName = document.querySelector(".userName").value;
+    const phone = document.querySelector(".phone").value;
+    const sumcredit = document.querySelector(".sumcredit").value;
+    return {
+        username: userName,
+        personalnumber: phone,
+        sumcredit: sumcredit
+    }
 
-function createUsers(){
+}
+
+function createUsers() {
     contentByJs.innerHTML = "";
     contentByJs.appendChild(createElements("h1", "הוספת סועד"));
-    
     const inputUserName = createElements("input")
-    inputUserName.className = "createUserInput"
+    inputUserName.classList.add("createUserInput")
+    inputUserName.classList.add("userName")
     inputUserName.setAttribute("placeholder", "שם הסועד")
-    
+
     const inputUserPhone = createElements("input")
     inputUserPhone.type = "tel"
-    inputUserPhone.className = "createUserInput"
+    inputUserPhone.classList.add("createUserInput")
+    inputUserPhone.classList.add("phone")
     inputUserPhone.setAttribute("placeholder", "טלפון הסועד")
-    
+
     const sumcredit = createElements("input")
     sumcredit.type = "number"
-    sumcredit.className = "createUserInput"
+    sumcredit.classList.add("createUserInput")
+    sumcredit.classList.add("sumcredit")
     sumcredit.setAttribute("placeholder", "יתרת זכות")
-    
-    const submitBtn = createElements("input")
+
+    const submitBtn = document.createElement("input")
     submitBtn.type = "button"
     submitBtn.value = "הוספה"
     submitBtn.className = "createUserSubmitBtn"
 
-    submitBtn.addEventListener("pointerdown",createNewUser)
-    
+    submitBtn.addEventListener("pointerdown", () => createNewUser(newUser()))
+
 
     contentByJs.appendChild(inputUserName);
     contentByJs.appendChild(inputUserPhone);
     contentByJs.appendChild(sumcredit);
     contentByJs.appendChild(submitBtn);
-    
+
 }
