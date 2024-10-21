@@ -132,10 +132,12 @@ button:hover{
     height: 15%;
     background-color: rgb(69, 179, 89);
     border-radius: 5px;
-    border: solid 2px black;
+    border: solid 2px rgb(253, 254, 253);
     text-align: center;
     padding: 0.4%;
     font-size: larger;
+    font-weight: bold;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
 }
 
