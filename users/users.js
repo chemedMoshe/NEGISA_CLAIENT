@@ -19,14 +19,14 @@ export function usersBtnFunc() {
     contentByJs.style.display = "flex";
     contentByJs.style.position = "absolute";
 }
-const newUser = () => {
+const newUserObj = () => {
     const userName = document.querySelector(".userName").value;
     const phone = document.querySelector(".phone").value;
     const sumcredit = document.querySelector(".sumcredit").value;
     return {
         username: userName,
         personalnumber: phone,
-        sumcredit: sumcredit
+        sumcredit: sumcredit || 0
     }
 
 }
@@ -56,8 +56,15 @@ function createUsers() {
     submitBtn.value = "הוספה"
     submitBtn.className = "createUserSubmitBtn"
 
-    submitBtn.addEventListener("pointerdown", () => createNewUser(newUser()))
-
+    submitBtn.addEventListener("pointerdown", async() => {
+        try {
+            const data = await createNewUser(newUserObj())
+            contentByJs.innerHTML = "";
+            contentByJs.appendChild(createElements("h1", `סועד ${data.result.user.username} נוסף בהצלחה`));
+        } catch (error) {
+            console.log(error)
+        }
+    })
 
     contentByJs.appendChild(inputUserName);
     contentByJs.appendChild(inputUserPhone);

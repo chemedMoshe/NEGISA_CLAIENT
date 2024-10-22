@@ -5,11 +5,10 @@ export const creditBtn = document.querySelector(".creditMeinBtn");
 export const usersBtn = document.querySelector(".usersMeinBtn");
 export const contentByJs = document.querySelector(".contentByJs");
 
-export const createElements = (element, content = "") => {
+export const createElements = (element,content) => {
     const newElement = document.createElement(element);
-    if (content) {
-        newElement.textContent = content;
-    }
+    if (content) newElement.textContent = content
+
     return newElement;
 }
 

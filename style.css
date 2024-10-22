@@ -127,6 +127,9 @@ button:hover{
     font-size: larger;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
 }
+.createUserInput:hover{
+    transform: scale(1.1);
+}
 .createUserSubmitBtn{
     width: 30%;
     height: 15%;
@@ -137,8 +140,12 @@ button:hover{
     padding: 0.4%;
     font-size: larger;
     font-weight: bold;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
+}
+
+.createUserSubmitBtn:hover{
+    background-color: rgb(12, 241, 54);
+    transform: scale(1.1);
 }
 
 
