@@ -1,11 +1,11 @@
-import { usersBtnFunc } from "./users/users.js";
+import { usersBtnFunc } from "./users/userMain.js";
 import { creditsBtnFunc } from "./credit/credit.js";
 
 export const creditBtn = document.querySelector(".creditMeinBtn");
 export const usersBtn = document.querySelector(".usersMeinBtn");
 export const contentByJs = document.querySelector(".contentByJs");
 
-export const createElements = (element,content) => {
+export function createElements  (element,content)  {
     const newElement = document.createElement(element);
     if (content) newElement.textContent = content
 

@@ -6,8 +6,8 @@ export const createNewUser = async (user) => {
         },
         body: JSON.stringify(user),
     });
-   
-    //console.log(response.json());
-     return await response.json();
+    const data = await response.json()
+     return data
+    
     
 }
