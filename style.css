@@ -204,6 +204,16 @@ caption{
     margin-bottom: 3%;
 }
 
+.deleteStatus,.createStatus{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color:rgba(2, 247, 76, 0.678);
+    padding: 2%;
+}
+
 
 
 

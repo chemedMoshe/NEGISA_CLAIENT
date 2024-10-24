@@ -1,7 +1,8 @@
 import { createElements } from "../script.js";
 import { contentByJs } from "../script.js";
+import { deleteUser } from "./deleteUser.js";
 
-const table = createElements("table");
+export const table = createElements("table");
       table.classList.add("usersTable");
 
 const thead = createElements("thead");
@@ -39,6 +40,9 @@ export function insertUsers(users) {
         editBtn.classList.add("editBtn");
     const deleteBtn = createElements("button","מחיקה");
         deleteBtn.classList.add("deleteBtn");
+        deleteBtn.dataset.username = user.username
+        deleteBtn.dataset.personalnumber = user.personalnumber
+        deleteBtn.addEventListener("pointerdown",(event) => deleteUser(event,user) )
     tdActions.appendChild(editBtn);
     tdActions.appendChild(deleteBtn);
     
