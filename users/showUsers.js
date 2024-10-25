@@ -21,11 +21,14 @@ thead.appendChild(tr);
 table.appendChild(thead);
 const tbody = createElements("tbody");
 
+const caption = document.createElement("caption");
+caption.appendChild(createElements("h1"))
 export function insertUsers(users) {
     contentByJs.innerHTML = "";
     tbody.innerHTML = "";
-    const caption = document.createElement("caption");
-    caption.appendChild(createElements("h1","כל הסועדים"));
+    caption.innerHTML = "";
+    caption.appendChild(createElements("h1", "רשימת סועדים"))
+    
     table.appendChild(caption);
     users.forEach(user => {
     const tr = createElements("tr");
