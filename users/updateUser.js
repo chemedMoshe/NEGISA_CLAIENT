@@ -73,6 +73,6 @@ async function updateUserById(id) {
         updateMessage.innerHTML = ""
         updateMessage.textContent = `${error}`
     }
-        }
+        } 
 
 
