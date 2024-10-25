@@ -117,7 +117,7 @@ button:hover{
     transform: scale(1.1);
 }
 
-.createUserInput{
+.createUserInput,.updateUserInput{
     width: 60%;
     height: 15%;
     border-radius: 5px;
@@ -127,10 +127,11 @@ button:hover{
     font-size: larger;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
 }
-.createUserInput:hover{
+.createUserInput:hover,
+.updateUserInput:hover {
     transform: scale(1.1);
 }
-.createUserSubmitBtn{
+.createUserSubmitBtn,.updateUserSubmitBtn{
     width: 30%;
     height: 15%;
     background-color: rgb(69, 179, 89);
@@ -143,7 +144,8 @@ button:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
 }
 
-.createUserSubmitBtn:hover{
+.createUserSubmitBtn:hover,
+ .updateUserSubmitBtn:hover {
     background-color: rgb(12, 241, 54);
     transform: scale(1.1);
 }
@@ -204,7 +206,7 @@ caption{
     margin-bottom: 3%;
 }
 
-.deleteStatus,.createStatus{
+.deleteStatus,.createStatus,.createStatus{
     position: fixed;
     top: 50%;
     left: 50%;

@@ -1,6 +1,7 @@
 import { createElements } from "../script.js";
 import { contentByJs } from "../script.js";
 import { deleteUser } from "./deleteUser.js";
+import { updateUserMain } from "./updateUser.js";
 
 export const table = createElements("table");
       table.classList.add("usersTable");
@@ -38,6 +39,9 @@ export function insertUsers(users) {
     
     const editBtn = createElements("button","עריכה");
         editBtn.classList.add("editBtn");
+        editBtn.addEventListener("pointerdown",(event) => updateUserMain(event,user) )
+
+
     const deleteBtn = createElements("button","מחיקה");
         deleteBtn.classList.add("deleteBtn");
         deleteBtn.dataset.username = user.username

@@ -1,6 +1,6 @@
 import { deleteUserFetch } from "../fetchs/fetchLayer.js";
 import { contentByJs, createElements } from "../script.js";
-import { insertUsers ,table} from "./showUsers.js"
+import { insertUsers } from "./showUsers.js"
 export async function deleteUser(event,user) {
     try{
         

@@ -39,3 +39,22 @@ export const deleteUserFetch = async (user) => {
         return error
     }
 }
+
+export const updateUserFetch = async (id, userUpdated) => {
+    try{
+    const response = await fetch(`http://localhost:3000/user/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userUpdated),
+    })
+
+        const data = await response.json()
+        return data
+    }
+    catch(error){
+        return error
+    }
+}
+    
