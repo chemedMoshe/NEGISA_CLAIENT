@@ -1,5 +1,6 @@
 import { usersBtnFunc } from "./users/userMain.js";
 import { creditsBtnFunc } from "./credit/credit.js";
+import { searchInput, searchUser } from "./users/search.js";
 
 export const creditBtn = document.querySelector(".creditMeinBtn");
 export const usersBtn = document.querySelector(".usersMeinBtn");
@@ -14,7 +15,7 @@ export function createElements  (element,content)  {
 
 creditBtn.addEventListener("pointerdown", creditsBtnFunc)
 usersBtn.addEventListener("pointerdown", usersBtnFunc)
-
+searchInput.addEventListener('input', searchUser);
 
 
 

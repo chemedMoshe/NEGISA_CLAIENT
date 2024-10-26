@@ -262,6 +262,24 @@ overflow-y: auto;
     font-size: larger;
 }
 
+.close{
+    position: absolute;
+    top:0;
+    left: 10%;
+    border-radius: 5px;
+    
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+    background-color: rgba(16, 211, 52, 0.699);
+    font-size: 20px;
+    border: solid 2px rgb(253, 254, 253);
+}
+
+.close:active{
+    transform: scale(0.9);
+}
+
 
 
 

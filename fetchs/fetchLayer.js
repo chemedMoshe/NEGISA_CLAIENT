@@ -57,4 +57,21 @@ export const updateUserFetch = async (id, userUpdated) => {
         return error
     }
 }
+
+export const searchUserFetch = async (username) => {
+    try{
+    const response = await fetch(`http://localhost:3000/user/search`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(username),
+    })
+    const data = await response.json()
+    return data.result
+    }
+    catch(error){
+        return error
+    }
+}
     
