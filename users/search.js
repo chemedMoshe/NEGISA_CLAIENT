@@ -4,8 +4,19 @@ import { createElements } from '../script.js';
 export const searchInput = document.querySelector('.searchInput');
 const searchDiv = document.querySelector('.searchDiv');
 const resSearchdiv = document.querySelector('.resSearch'); 
+const openSearchDiv = document.querySelector('.search')
 const h1Messahe = createElements("h1")
 resSearchdiv.appendChild(h1Messahe)
+
+export function openSearch() {
+    console.log(openSearchDiv,searchDiv);
+    
+    const position1  = window.getComputedStyle(openSearchDiv).display 
+    const position2  = window.getComputedStyle(searchDiv).display
+console.log(position1,position2);
+
+openSearchDiv.style.display = position2;
+    searchDiv.style.display = position1;}
 export async function searchUser() {
     const user = searchInput.value
     resSearchdiv.innerHTML = ""
