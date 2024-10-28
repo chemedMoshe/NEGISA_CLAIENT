@@ -1,5 +1,5 @@
 export const createNewUserFetch = async (user) => {
-    const response = await fetch("http://localhost:3000/user", {
+    const response = await fetch("https://negisaserver-12.onrender.com/user", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -15,7 +15,7 @@ export const createNewUserFetch = async (user) => {
 
 export const getAllUsersFetch = async () => {
     try {
-        const response = await fetch("http://localhost:3000/user");
+        const response = await fetch("https://negisaserver-12.onrender.com/user/");
         const data = await response.json();
         return data;
     } catch (error) {
@@ -26,7 +26,7 @@ export const getAllUsersFetch = async () => {
 export const deleteUserFetch = async (user) => {
     try {
 
-        const response = await fetch(`http://localhost:3000/user/`, {
+        const response = await fetch(`https://negisaserver-12.onrender.com/user/`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export const deleteUserFetch = async (user) => {
 
 export const updateUserFetch = async (id, userUpdated) => {
     try{
-    const response = await fetch(`http://localhost:3000/user/${id}`, {
+    const response = await fetch(`https://negisaserver-12.onrender.com/user/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -60,7 +60,7 @@ export const updateUserFetch = async (id, userUpdated) => {
 
 export const searchUserFetch = async (username) => {
     try{
-    const response = await fetch(`http://localhost:3000/user/search`, {
+    const response = await fetch(`https://negisaserver-12.onrender.com/user/search`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
